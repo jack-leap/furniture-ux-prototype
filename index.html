@@ -4,28 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity Web Player | Furniture UX Prototyping</title>
-  </head>
-  <script>
-    (function (m, a, z, e) {
-      var s, t;
-      try {
-        t = m.sessionStorage.getItem('maze-us');
-      } catch (err) {}
-    
-      if (!t) {
-        t = new Date().getTime();
+    <script>
+      (function (m, a, z, e) {
+        var s, t;
         try {
-          m.sessionStorage.setItem('maze-us', t);
+          t = m.sessionStorage.getItem('maze-us');
         } catch (err) {}
-      }
-    
-      s = a.createElement('script');
-      s.src = z + '?apiKey=' + e;
-      s.async = true;
-      a.getElementsByTagName('head')[0].appendChild(s);
-      m.mazeUniversalSnippetApiKey = e;
-    })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', 'c30acc18-7111-47de-b700-51ca80feb6b8');
-  </script>
+      
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+      
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', 'c30acc18-7111-47de-b700-51ca80feb6b8');
+    </script>
+  </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=1366 height=768 tabindex="-1" style="width: 1366px; height: 768px; background: #231F20"></canvas>
     <script src="Build/Build.loader.js"></script>
